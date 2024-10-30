@@ -1,0 +1,18 @@
+﻿@page "/async"
+@rendermode InteractiveServer
+
+<PageTitle>Async</PageTitle>
+
+<h1>Async</h1>
+
+<!--<p role="status">@await GetAsyncString()</p>-->
+
+@code {
+
+    private async Task<string> GetAsyncString()
+    {
+        await Task.Delay(2000);
+        return "Awaited";
+    }
+
+}
